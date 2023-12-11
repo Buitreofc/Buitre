@@ -1,10 +1,10 @@
 {
-  "name": "TheMystic-Bot-MD",
-  "website": "https://github.com/BrunoSobrino",
-  "description": "Subscribete a The Shadow Borkers - Bot (≧▽≦)",
-  "repository": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
-  "logo": "https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/pictures/heroku-icon.jpg",
-  "success_url": "https://github.com/BrunoSobrino/TheMystic-Bot-MD",
+  "name": "𝗕𝗨𝗜𝗧𝗥𝗘 𝗕𝗢𝗧",
+  "website": "https://github.com/Buitreofc/Buitre",
+  "description": "Sigueme : @iambuitre (≧▽≦)",
+  "repository": "https://github.com/Buitreofc/Buitre",
+  "logo": "https://github.com/Buitreofc/Buitre",
+  "success_url": "https://github.com/Buitreofc/Buitre",
   "keywords": [
     "nodejs",
     "heroku",
@@ -29,10 +29,10 @@
       "url": "heroku/nodejs"
     },
     {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+      "url": "https://github.com/Buitreofc/Buitre"
     },
     {
-      "url": "https://github.com/bogini/heroku-buildpack-graphicsmagick"
+      "url": "https://github.com/Buitreofc/Buitre"
     }    
  ]
 }
