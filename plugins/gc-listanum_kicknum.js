@@ -1,5 +1,5 @@
-/*              Codigo Creado Por Bruno Sobrino
-      (https://github.com/BrunoSobrino/TheMystic-Bot-MD)
+/*              Codigo Creado Por Buitre OFC
+      (https://github.com/Buitreofc/Buitre)
 */
 
 const handler = async (m, {conn, args, groupMetadata, participants, usedPrefix, command, isBotAdmin, isSuperAdmin}) => {
