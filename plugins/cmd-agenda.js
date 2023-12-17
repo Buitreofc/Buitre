@@ -22,6 +22,6 @@ global.pack6 = [
 
  
 
- "https://e.top4top.io/p_290757to50.jpgg"
+ "https://e.top4top.io/p_290757to50.jpg"
 
   ]
