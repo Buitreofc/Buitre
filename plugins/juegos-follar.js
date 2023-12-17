@@ -1,5 +1,5 @@
 let handler = async (m, {conn, text}) => {
-  let coger = `🥵 te acabas acabas de coger a ${text}!🥵 
+  let coger = `🤤👅🥵 *𝐀𝐂𝐀𝐁𝐀𝐒 𝐃𝐄 𝐅𝐎𝐋𝐋𝐀𝐑𝐓𝐄𝐋@!!* 🥵👅🤤
     
   te acabas de coger a la puta de ${text} ⁩mientras gemia como una maldita puta
     
