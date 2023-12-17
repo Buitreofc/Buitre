@@ -361,7 +361,7 @@
   }  
   await conn.sendMessage(m.chat, buttonMessage, {quoted: fkontak})  
   } catch {  
-  conn.reply(m.chat, '*⚠️ EL MENU TIENE UN ERROR PRUEBE CON EL MENU COMPLETO: (.menucompleto)*', fpoll, m)  
+  conn.reply(m.chat, '*⚠️ EL MENU TIENE UN ERROR PRUEBE CON EL MENU COMPLETO: (.menu)*', fpoll, m)  
   }}  
   handler.tags = ['menu']  
   handler.command = /^(pqowkwkwowl)$/i  
