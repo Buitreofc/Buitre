@@ -363,7 +363,7 @@
   } catch {  
   conn.reply(m.chat, '*⚠️ EL MENU TIENE UN ERROR PRUEBE CON EL MENU COMPLETO: (.menucompleto)*', fpoll, m)  
   }}  
-  handler.tags = ['main']  
+  handler.tags = ['menu']  
   handler.command = /^(pqowkwkwowl)$/i  
   handler.register = true  
   export default handler  
