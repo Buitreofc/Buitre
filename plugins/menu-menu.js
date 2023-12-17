@@ -21,235 +21,467 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
     const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
     const doc = ['pdf', 'zip', 'vnd.openxmlformats-officedocument.presentationml.presentation', 'vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'vnd.openxmlformats-officedocument.wordprocessingml.document'];
     const document = doc[Math.floor(Math.random() * doc.length)];
-    const str = `𝙏𝙃𝙀 𝙈𝙔𝙎𝙏𝙄𝘾 - 𝘽𝙊𝙏
+    const str = `𝗕𝗨𝗜𝗧𝗥𝗘 𝗕𝗢𝗧
 
  ▢ *Hola,* ${taguser}
 
-  ╔══════════════
-║ ✪ ⃟ 📋 𝐔𝐒𝐔𝐀𝐑𝐈𝐎𝐒
-╚═══════════════
-┃╭──────────────
-┃├⫹⫺ 𝙽𝙾𝙼𝙱𝚁𝙴 : ${name}
-┃├⫹⫺ 𝙻𝙸𝙼𝙸𝚃𝙴 : ${diamond}
-┃├⫹⫺ 𝙽𝙸𝚅𝙴𝙻 : ${level}
-〬┃├⫹⫺ 𝚁𝙰𝙽𝙶𝙾 : ${role}
-┃├⫹⫺ 𝙴𝚇𝙿 : ${exp}
-┃╰──────────────
-╚══════════════════⋆
-╔════════════
-║ ✪ ⃟📑 𝐈𝐍𝐅𝐎𝐁𝐎𝐓
-╚═══════════════
-║╭──────────────
-║├⫹⫺ 𝙲𝚁𝙴𝙰𝙳𝙾𝚁 : Gael
-║├⫹⫺ 𝙽𝚄𝙼𝙴𝚁𝙾: wa.me/
-║├⫹⫺ 𝚃𝙸𝙴𝙼𝙿𝙾 𝙰𝙲𝚃𝙸𝚅𝙾: ${uptime}
-║├⫹⫺ 𝚁𝙴𝙶𝙸𝚂𝚃𝚁𝙰𝙳𝙾𝚂 : ${rtotalreg} 𝐝𝐞 ${totalreg} 𝐮𝐬𝐮𝐚𝐫𝐢𝐨𝐬:
-║╰────────────── 
-╚══════════════════⋆
+ _*< TUS ESTADÍSTICAS />*_
 
-╔══════════════
-║ ✪ ⃟📅 𝐇𝐎𝐘
-╚═══════════════
-║┋⫹⫺ 𝙵𝙴𝙲𝙷𝙰 : ${date}
-〬╚═════ ≪ •❈• ≫ ═════╝
+ ▢ *Nivel:* ${level}
+ ▢ *Experiencia:* ${exp}
+ ▢ *Rango:* ${role}
+ ▢ *Diamantes:* ${limit}
+ ▢ *BuitreCoins:* ${money}
+ ▢ *Tokens:* ${joincount}
+ ▢ *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
+ ${readMore}
 
-╔══════════════
-║ ✪ ⃟🧾 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎𝐍
-╚═══════════════
-〬║┋ႌ〬⫹⫺ .𝚎𝚜𝚝𝚊𝚍𝚘
-〬║┋ႌ〬⫹⫺ .𝚍𝚜
-〬║┋ႌ〬⫹⫺ .𝚍𝚎𝚕𝚝𝚞𝚛𝚋𝚘
-║┋ႌ〬⫹⫺ .𝚘𝚠𝚗𝚎𝚛
-〬║┋ႌ〬⫹⫺ .𝚐𝚛𝚘𝚞𝚙𝚕𝚒𝚜𝚝
-║┋ႌ〬⫹⫺ .𝚍𝚘𝚗𝚊𝚛
-║┋ႌ〬⫹⫺ .𝚐𝚛𝚞𝚙𝚘𝚜
-║┋ႌ〬⫹⫺ .𝚒𝚗𝚏𝚘𝚋𝚘𝚝
-〬║┋ႌ〬⫹⫺ .𝚌𝚞𝚎𝚗𝚝𝚊𝚜
-〬║┋ႌ〬⫹⫺ .𝚛𝚎𝚙𝚘𝚛𝚝𝚎
-║┋ႌ〬⫹⫺ .𝚓𝚘𝚒𝚗
-║┋ႌ〬⫹⫺ .𝚋𝚘𝚝
-〬╚════ ≪ •❈• ≫ ════╝
+  _*< LISTA DE MENUS />*_
+  
+  ▢ _${usedPrefix}menuaudios_
+  ▢ _${usedPrefix}menuanimes_
+  ▢ _${usedPrefix}labiblia_ (🔞)
 
-╔══════════════
-║ ✪ ⃟🖥 𝐉𝐀𝐃𝐈𝐁𝐎𝐓
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚓𝚊𝚍𝚒𝚋𝚘𝚝
-║┋ႌ〬⫹⫺ .𝚓𝚊𝚍𝚒𝚋𝚘𝚝 --𝚌𝚘𝚍𝚎
-║┋ႌ〬⫹⫺ .𝚋𝚘𝚝𝚜
-║┋ႌ〬⫹⫺ .𝚍𝚎𝚕𝚎𝚝𝚎𝚜𝚎𝚜𝚒𝚘𝚗
-║┋ႌ〬⫹⫺ .𝚜𝚝𝚘𝚙
-〬╚════ ≪ •❈• ≫ ════╝
+ 
+ _*< SOBRE EL BOT />*_
 
-╔══════════════
-║ ✪ ⃟🚀 𝐃𝐄𝐒𝐂𝐀𝐑𝐆𝐀𝐒
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚙𝚕𝚊𝚢
-║┋ႌ〬⫹⫺ .𝚙𝚕𝚊𝚢𝟸
-║┋ႌ〬⫹⫺ .𝚢𝚝𝚊
-║┋ႌ〬⫹⫺ .𝚢𝚝𝚟
-║┋ႌ〬⫹⫺ .𝚏𝚊𝚌𝚎𝚋𝚘𝚘𝚔
-║┋ႌ〬⫹⫺ .𝚝𝚒𝚔𝚝𝚘𝚔
-║┋ႌ〬⫹⫺ .𝚒𝚗𝚜𝚝𝚊𝚐𝚛𝚊𝚖
-║┋ႌ〬⫹⫺ .𝚐𝚒𝚝𝚌𝚕𝚘𝚗𝚎
-║┋ႌ〬⫹⫺ .𝚙𝚒𝚗𝚝𝚎𝚛𝚎𝚜𝚝
-║┋ႌ〬⫹⫺ .𝚒𝚖𝚊𝚐𝚎𝚗
-║┋ႌ〬⫹⫺ .𝚖𝚎𝚍𝚒𝚊𝚏𝚒𝚛𝚎
-〬╚════ ≪ •❈• ≫ ════╝
+  ▢ _${usedPrefix}terminosycondiciones_
+  ▢ _${usedPrefix}grupos_
+  ▢ _${usedPrefix}estado_
+  ▢ _${usedPrefix}infobot_
+  ▢ _${usedPrefix}speedtest_
+  ▢ _${usedPrefix}donar_
+  ▢ _${usedPrefix}owner_
+  ▢ _${usedPrefix}script_
+  ▢ _${usedPrefix}reporte *<txt>*_
+  ▢ _${usedPrefix}join *<wagp_url>*_
+  ▢ _${usedPrefix}fixmsgespera_
+  ▢ _bot_ (sin prefijo)
 
-╔══════════════
-║ ✪ ⃟🔎 𝐁𝐔𝐒𝐂𝐀𝐃𝐎𝐑𝐄𝐒
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚐𝚘𝚘𝚐𝚕𝚎
-║┋ႌ〬⫹⫺ .𝚢𝚝𝚜
-〬╚════ ≪ •❈• ≫ ════╝
 
-╔══════════════
-║ ✪ ⃟🛰 𝐂𝐎𝐍𝐕𝐄𝐑𝐓𝐈𝐃𝐎𝐑𝐄𝐒
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚝𝚘𝚒𝚖𝚐
-║┋ႌ〬⫹⫺ .𝚝𝚘𝚖𝚙𝟹
-║┋ႌ〬⫹⫺ .𝚝𝚘𝚙𝚝𝚝
-║┋ႌ〬⫹⫺ .𝚝𝚘𝚞𝚛𝚕
-║┋ႌ〬⫹⫺ .𝚝𝚘𝚟𝚒𝚍𝚎𝚘
-║┋ႌ〬⫹⫺ .𝚝𝚝𝚜
-〬╚════ ≪ •❈• ≫ ════╝
+ _*< SUB-BOTS />*_
 
-╔══════════════
-║ ✪ ⃟🔊 𝐀𝐔𝐃𝐈𝐎𝐒-𝐄𝐅𝐄𝐂𝐓𝐎𝐒
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚋𝚊𝚜𝚜
-║┋ႌ〬⫹⫺ .𝚋𝚕𝚘𝚠𝚗
-║┋ႌ〬⫹⫺ .𝚍𝚎𝚎𝚙
-║┋ႌ〬⫹⫺ .𝚎𝚊𝚛𝚛𝚊𝚙𝚎
-║┋ႌ〬⫹⫺ .𝚏𝚊𝚜
-║┋ႌ〬⫹⫺ .𝚏𝚊𝚜𝚝
-║┋ႌ〬⫹⫺ .𝚗𝚒𝚐𝚑𝚝𝚌𝚘𝚛𝚎
-║┋ႌ〬⫹⫺ .𝚛𝚎𝚟𝚎𝚛𝚜𝚎
-║┋ႌ〬⫹⫺ .𝚛𝚘𝚋𝚘𝚝
-║┋ႌ〬⫹⫺ .𝚜𝚕𝚘𝚠
-║┋ႌ〬⫹⫺ .𝚜𝚖𝚘𝚘𝚝𝚑
-║┋ႌ〬⫹⫺ .𝚝𝚞𝚙𝚊𝚒
-║┋ႌ〬⫹⫺ .𝚜𝚚𝚞𝚒𝚛𝚛𝚎𝚕
-║┋ႌ〬⫹⫺ .𝚌𝚑𝚒𝚙𝚖𝚞𝚗𝚔
-〬╚════ ≪ •❈• ≫ ════╝
+  ▢ _${usedPrefix}serbot --code_
+  ▢ _${usedPrefix}serbot_
+  ▢ _${usedPrefix}deletebot_
+  ▢ _${usedPrefix}token_
+  ▢ _${usedPrefix}stop_
+  ▢ _${usedPrefix}bots_
+  ▢
+  ▢ _${usedPrefix}enable restrict_
+  ▢ _${usedPrefix}disable restrict_
+  ▢ _${usedPrefix}enable autoread_
+  ▢ _${usedPrefix}disable autoread_
+  ▢ _${usedPrefix}enable antispam_
+  ▢ _${usedPrefix}disable antispam_
+  ▢ _${usedPrefix}enable anticall_
+  ▢ _${usedPrefix}disable anticall_
+  ▢ _${usedPrefix}enable modoia_
+  ▢ _${usedPrefix}disable modoia_
+  ▢ _${usedPrefix}enable audios_bot_
+  ▢ _${usedPrefix}disable audios_bot_
+  ▢ _${usedPrefix}enable antiprivado_
+  ▢ _${usedPrefix}disable antiprivado_
+  
 
-╔══════════════
-║ ✪ ⃟🛠 𝐇𝐄𝐑𝐑𝐀𝐌𝐈𝐄𝐍𝐓𝐀𝐒
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚊𝚌𝚘𝚛𝚝𝚊𝚛
-║┋ႌ〬⫹⫺ .𝚚𝚛
-║┋ႌ〬⫹⫺ .𝚍𝚎𝚕𝚎𝚝𝚎
-║┋ႌ〬⫹⫺ .𝚛𝚎𝚊𝚍𝚖𝚘𝚛𝚎
-║┋ႌ〬⫹⫺ .𝚜𝚝𝚢𝚕𝚎𝚝𝚎𝚡𝚝
-〬╚════ ≪ •❈• ≫ ════╝
+ _*< JUEGOS />*_
 
-╔══════════════
-║ ✪ ⃟🎪 𝐉𝐔𝐄𝐆𝐎𝐒
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚖𝚊𝚝𝚎𝚜
-║┋ႌ〬⫹⫺ .𝚖𝚊𝚝𝚑
-║┋ႌ〬⫹⫺ .𝚜𝚒𝚖𝚒
-║┋ႌ〬⫹⫺ .𝚜𝚞𝚎𝚛𝚝𝚎
-║┋ႌ〬⫹⫺ .𝚙𝚙𝚝
-║┋ႌ〬⫹⫺ .𝚝𝚒𝚌𝚝𝚊𝚌𝚝𝚘𝚎
-║┋ႌ〬⫹⫺ .𝚍𝚎𝚕𝚝𝚒𝚌𝚝𝚊𝚌𝚝𝚘𝚎
-║┋ႌ〬⫹⫺ .𝚝𝚘𝚙𝚐𝚊𝚢𝚜
-║┋ႌ〬⫹⫺ .𝚝𝚘𝚙𝚘𝚝𝚊𝚔𝚞𝚜
-║┋ႌ〬⫹⫺ .𝚐𝚊𝚢
-║┋ႌ〬⫹⫺ .𝚍𝚘𝚡𝚎𝚊𝚛
-║┋ႌ〬⫹⫺ .𝚙𝚛𝚎𝚐𝚞𝚗𝚝𝚊
-║┋ႌ〬⫹⫺ .𝚊𝚙𝚘𝚜𝚝𝚊𝚛
-║┋ႌ〬⫹⫺ .𝚜𝚕𝚘𝚝
-║┋ႌ〬⫹⫺ .𝚍𝚊𝚍𝚘
-〬╚════ ≪ •❈• ≫ ════╝
+  ▢ _${usedPrefix}mates *<noob / easy / medium / hard / extreme /impossible /impossible2>*_
+  ▢ _${usedPrefix}fake *<txt1> <@tag> <txt2>*_
+  ▢ _${usedPrefix}ppt *<papel / tijera /piedra>*_
+  ▢ _${usedPrefix}prostituto *<nombre / @tag>*_
+  ▢ _${usedPrefix}prostituta *<nombre / @tag>*_
+  ▢ _${usedPrefix}gay2 *<nombre / @tag>*_
+  ▢ _${usedPrefix}lesbiana *<nombre / @tag>*_
+  ▢ _${usedPrefix}pajero *<nombre / @tag>*_
+  ▢ _${usedPrefix}pajera *<nombre / @tag>*_
+  ▢ _${usedPrefix}puto *<nombre / @tag>*_
+  ▢ _${usedPrefix}puta *<nombre / @tag>*_
+  ▢ _${usedPrefix}manco *<nombre / @tag>*_
+  ▢ _${usedPrefix}manca *<nombre / @tag>*_
+  ▢ _${usedPrefix}rata *<nombre / @tag>*_
+  ▢ _${usedPrefix}love *<nombre / @tag>*_
+  ▢ _${usedPrefix}doxear *<nombre / @tag>*_
+  ▢ _${usedPrefix}pregunta *<txt>*_
+  ▢ _${usedPrefix}suitpvp *<@tag>*_
+  ▢ _${usedPrefix}slot *<apuesta>*_
+  ▢ _${usedPrefix}ttt *<nombre sala>*_
+  ▢ _${usedPrefix}delttt_
+  ▢ _${usedPrefix}acertijo_
+  ▢ _${usedPrefix}simi *<txt>*_
+  ▢ _${usedPrefix}top *<txt>*_
+  ▢ _${usedPrefix}topgays_
+  ▢ _${usedPrefix}topotakus_
+  ▢ _${usedPrefix}formarpareja_
+  ▢ _${usedPrefix}verdad_
+  ▢ _${usedPrefix}reto_
+  ▢ _${usedPrefix}cancion_
+  ▢ _${usedPrefix}pista_
+  ▢ _${usedPrefix}akinator_
+  ▢ _${usedPrefix}wordfind_
 
-╔══════════════
-║ ✪ ⃟⚙️ 𝐆𝐑𝐔𝐏𝐎𝐒
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚐𝚛𝚞𝚙𝚘
-║┋ႌ〬⫹⫺ .𝚔𝚒𝚌𝚔
-║┋ႌ〬⫹⫺ .𝚊𝚍𝚍
-║┋ႌ〬⫹⫺ .𝚋𝚊𝚗𝚌𝚑𝚊𝚝
-║┋ႌ〬⫹⫺ .𝚞𝚗𝚋𝚊𝚗𝚌𝚑𝚊𝚝
-║┋ႌ〬⫹⫺ .𝚊𝚍𝚖𝚒𝚗𝚜
-║┋ႌ〬⫹⫺ .𝚒𝚗𝚏𝚘𝚐𝚛𝚘𝚞𝚙
-║┋ႌ〬⫹⫺ .𝚙𝚛𝚘𝚖𝚘𝚝𝚛
-║┋ႌ〬⫹⫺ .𝚍𝚎𝚖𝚘𝚝𝚎
-║┋ႌ〬⫹⫺ .𝚑𝚒𝚍𝚎𝚝𝚊𝚐
-║┋ႌ〬⫹⫺ .𝚝𝚊𝚐𝚊𝚕𝚕
-║┋ႌ〬⫹⫺ .𝚕𝚒𝚗𝚔
-║┋ႌ〬⫹⫺ .𝚋𝚊𝚗𝚌𝚑𝚊𝚝
-║┋ႌ〬⫹⫺ .𝚞𝚗𝚋𝚊𝚗𝚌𝚑𝚊𝚝
-〬╚════ ≪ •❈• ≫ ════╝
 
-╔══════════════
-║ ✪ ⃟✅ 𝐄𝐍𝐀𝐁𝐋𝐄 / 𝐃𝐈𝐒𝐀𝐁𝐋𝐄
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚎𝚗𝚊𝚋𝚕𝚎 𝚠𝚎𝚕𝚌𝚘𝚖𝚎𝚎
-║┋ႌ〬⫹⫺ .𝚍𝚒𝚜𝚊𝚋𝚕𝚎 𝚠𝚎𝚕𝚌𝚘𝚖𝚎
-║┋ႌ〬⫹⫺ .𝚎𝚗𝚊𝚋𝚕𝚎 𝚙𝚞𝚋𝚕𝚒𝚌
-║┋ႌ〬⫹⫺ .𝚍𝚒𝚜𝚊𝚋𝚕𝚎 𝚙𝚞𝚋𝚕𝚒𝚌
-║┋ႌ〬⫹⫺ .𝚎𝚗𝚊𝚋𝚕𝚎 𝚊𝚗𝚝𝚒𝚕𝚒𝚗𝚔
-║┋ႌ〬⫹⫺ .𝚍𝚒𝚜𝚊𝚋𝚕𝚎 𝚊𝚗𝚝𝚒𝚕𝚒𝚗𝚔
-║┋ႌ〬⫹⫺ .𝚎𝚗𝚊𝚋𝚕𝚎 𝚊𝚗𝚝𝚒𝚕𝚒𝚗𝚔𝟸
-║┋ႌ〬⫹⫺ .𝚍𝚒𝚜𝚊𝚋𝚕𝚎 𝚊𝚗𝚝𝚒𝚕𝚒𝚗𝚔𝟸
-║┋ႌ〬⫹⫺ .𝚎𝚗𝚊𝚋𝚕𝚎 𝚛𝚎𝚜𝚝𝚛𝚒𝚌𝚝
-║┋ႌ〬⫹⫺ .𝚍𝚒𝚜𝚊𝚋𝚕𝚎 𝚛𝚎𝚜𝚝𝚛𝚒𝚌𝚝
-║┋ႌ〬⫹⫺ .𝚎𝚗𝚊𝚋𝚕𝚎 𝚊𝚞𝚝𝚘𝚛𝚎𝚊𝚍
-║┋ႌ〬⫹⫺ .𝚍𝚒𝚜𝚊𝚋𝚕𝚎 𝚊𝚞𝚝𝚘𝚛𝚎𝚊𝚍
-║┋ႌ〬⫹⫺ .𝚎𝚗𝚊𝚋𝚕𝚎 𝚍𝚎𝚝𝚎𝚌𝚝
-║┋ႌ〬⫹⫺ .𝚍𝚒𝚜𝚊𝚋𝚕𝚎 𝚍𝚎𝚝𝚎𝚌𝚝
-║┋ႌ〬⫹⫺ .𝚎𝚗𝚊𝚋𝚕𝚎 𝚙𝚌𝚘𝚗𝚕𝚢
-║┋ႌ〬⫹⫺ .𝚍𝚒𝚜𝚊𝚋𝚕𝚎 𝚙𝚌𝚘𝚗𝚕𝚢
-║┋ႌ〬⫹⫺ .𝚎𝚗𝚊𝚋𝚕𝚎 𝚐𝚌𝚘𝚗𝚕𝚢
-║┋ႌ〬⫹⫺ .𝚍𝚒𝚜𝚊𝚋𝚕𝚎 𝚐𝚌𝚘𝚗𝚕𝚢
-〬╚════ ≪ •❈• ≫ ════╝
+ _*< ACT./DESACT. FUNC. />*_
 
-╔══════════════
-║ ✪ ⃟🎭 𝐑𝐏𝐆
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚖𝚒𝚗𝚊𝚛
-║┋ႌ〬⫹⫺ .𝚖𝚒𝚗𝚊𝚛𝟹
-║┋ႌ〬⫹⫺ .𝚖𝚒𝚗𝚊𝚛𝚍𝚒𝚊𝚖𝚊𝚗𝚝𝚎𝚜
-║┋ႌ〬⫹⫺ .𝚍𝚊𝚒𝚕𝚢
-║┋ႌ〬⫹⫺ .𝚠𝚘𝚛𝚔
-║┋ႌ〬⫹⫺ .𝚊𝚏𝚔
-║┋ႌ〬⫹⫺ .𝚛𝚘𝚋𝚛
-║┋ႌ〬⫹⫺ .𝚕𝚒𝚖𝚒𝚝
-║┋ႌ〬⫹⫺ .𝚛𝚎𝚐
-║┋ႌ〬⫹⫺ .𝚞𝚗𝚛𝚎𝚐
-║┋ႌ〬⫹⫺ .𝚖𝚢𝚗𝚜
-║┋ႌ〬⫹⫺ .𝚙𝚎𝚛𝚏𝚒𝚕
-║┋ႌ〬⫹⫺ .𝚕𝚎𝚟𝚎𝚕𝚞𝚙
-〬╚════ ≪ •❈• ≫ ════╝
+  ▢ _${usedPrefix}enable *welcome*_
+  ▢ _${usedPrefix}disable *welcome*_
+  ▢ _${usedPrefix}enable *modohorny*_
+  ▢ _${usedPrefix}disable *modohorny*_
+  ▢ _${usedPrefix}enable *antilink*_
+  ▢ _${usedPrefix}disable *antilink*_
+  ▢ _${usedPrefix}enable *antilink2*_
+  ▢ _${usedPrefix}disable *antilink2*_
+  ▢ _${usedPrefix}enable *detect*_
+  ▢ _${usedPrefix}disable *detect*_
+  ▢ _${usedPrefix}enable *audios*_
+  ▢ _${usedPrefix}disable *audios*_
+  ▢ _${usedPrefix}enable *autosticker*_
+  ▢ _${usedPrefix}disable *autosticker*_
+  ▢ _${usedPrefix}enable *antiviewonce*_
+  ▢ _${usedPrefix}disable *antiviewonce*_
+  ▢ _${usedPrefix}enable *antitoxic*_
+  ▢ _${usedPrefix}disable *antitoxic*_
+  ▢ _${usedPrefix}enable *antitraba*_
+  ▢ _${usedPrefix}disable *antitraba*_
+  ▢ _${usedPrefix}enable *antiarabes*_
+  ▢ _${usedPrefix}disable *antiarabes*_
+  ▢ _${usedPrefix}enable *modoadmin*_
+  ▢ _${usedPrefix}disable *modoadmin*_
+  ▢ _${usedPrefix}enable *antidelete*_
+  ▢ _${usedPrefix}disable *antidelete*_
 
-╔══════════════
-║ ✪ ⃟🛸 𝐒𝐓𝐈𝐂𝐊𝐄𝐑
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚜
-║┋ႌ〬⫹⫺ .𝚠𝚖
-〬╚════ ≪ •❈• ≫ ════╝
 
-╔══════════════
-║ ✪ ⃟💎 𝐎𝐖𝐍𝐄𝐑
-╚═══════════════
-║┋ႌ〬⫹⫺ .𝚞𝚙𝚍𝚊𝚝𝚎
-〬║┋ႌ〬⫹⫺ .𝚊𝚌𝚝𝚞𝚊𝚕𝚒𝚣𝚊𝚛
-〬║┋ႌ〬⫹⫺ .𝚜𝚎𝚝𝚙𝚛𝚎𝚏𝚒𝚡
-〬║┋ႌ〬⫹⫺ .𝚋𝚘𝚘𝚜𝚝
-〬║┋ႌ〬⫹⫺ .𝚜𝚎𝚝𝚋𝚘𝚝𝚗𝚊𝚖𝚎
-║┋ႌ〬⫹⫺ .𝚛𝚎𝚜𝚝𝚊𝚛𝚝
-║┋ႌ〬⫹⫺ .𝚊𝚞𝚝𝚘𝚊𝚍𝚖𝚒𝚗
-║┋ႌ〬⫹⫺ .𝚕𝚎𝚊𝚟𝚎
-║┋ႌ〬⫹⫺ .𝚜𝚊𝚕𝚒𝚛
-║┋ႌ〬⫹⫺ .𝚌𝚕𝚎𝚊𝚛𝚝𝚙𝚖
-║┋ႌ〬⫹⫺ .𝚋𝚌
-║┋ႌ〬⫹⫺ .𝚋𝚌𝚚𝚌
-║┋ႌ〬⫹⫺ .𝚋𝚌𝚌
-║┋ႌ〬⫹⫺ .𝚋𝚊𝚗𝚞𝚜𝚎𝚛
-║┋ႌ〬⫹⫺ .𝚞𝚗𝚋𝚊𝚗𝚞𝚜𝚎𝚛
-〬╚════ ≪ •❈• ≫ ════╝` 
-  `.trim();
+ _*< DESCARGAS />*_
+
+ ▢ _${usedPrefix}play *<txt>*_
+ ▢ _${usedPrefix}play2 *<txt>*_
+ ▢ _${usedPrefix}play.1 *<txt>*_
+ ▢ _${usedPrefix}play.2 *<txt>*_
+ ▢ _${usedPrefix}playdoc *<txt>*_
+ ▢ _${usedPrefix}playdoc2 *<txt>*_
+ ▢ _${usedPrefix}playlist *<txt>*_
+ ▢ _${usedPrefix}ytshort *<url>*_
+ ▢ _${usedPrefix}ytmp3 *<url>*_
+ ▢ _${usedPrefix}ytmp3doc *<url>*_
+ ▢ _${usedPrefix}ytmp4 *<url>*_
+ ▢ _${usedPrefix}ytmp4doc *<url>*_
+ ▢ _${usedPrefix}videodoc *<url>*_
+ ▢ _${usedPrefix}spotify *<txt>*_
+ ▢ _${usedPrefix}facebook *<url>*_
+ ▢ _${usedPrefix}instagram *<url>*_
+ ▢ _${usedPrefix}igstory *<usr>*_
+ ▢ _${usedPrefix}tiktok *<url>*_
+ ▢ _${usedPrefix}tiktokimg *<url>*_
+ ▢ _${usedPrefix}pptiktok *<usr>*_
+ ▢ _${usedPrefix}mediafire *<url>*_ 
+ ▢ _${usedPrefix}pinterest *<txt>*_
+ ▢ _${usedPrefix}gitclone *<url>*_
+ ▢ _${usedPrefix}gdrive *<url>*_
+ ▢ _${usedPrefix}twitter *<url>*_
+ ▢ _${usedPrefix}ringtone *<txt>*_
+ ▢ _${usedPrefix}soundcloud *<txt>*_
+ ▢ _${usedPrefix}stickerpack *<url>*_
+ ▢ _${usedPrefix}wallpaper *<txt>*_ 
+ ▢ _${usedPrefix}dapk2 *<url>*_
+ ▢ _${usedPrefix}xnxxdl *<url>*_ (🔞)
+ ▢ _${usedPrefix}xvideosdl *<url>*_ (🔞)
+
+
+ _*< BUSCADORES />*_
+
+  ▢ _${usedPrefix}githubsearch *<txt>*_
+  ▢ _${usedPrefix}pelisplus *<txt>*_
+  ▢ _${usedPrefix}modapk *<txt>*_
+  ▢ _${usedPrefix}stickersearch *<txt>*_
+  ▢ _${usedPrefix}stickersearch2 *<txt>*_
+  ▢ _${usedPrefix}xnxxsearch *<txt>*_
+  ▢ _${usedPrefix}animeinfo *<txt>*_
+  ▢ _${usedPrefix}google *<txt>*_
+  ▢ _${usedPrefix}letra *<txt>*_
+  ▢ _${usedPrefix}wikipedia *<txt>*_
+  ▢ _${usedPrefix}ytsearch *<txt>*_
+  ▢ _${usedPrefix}playstore *<txt>*_
+
+
+ _*< GRUPOS />*_
+
+  ▢ _${usedPrefix}add *num>*_
+  ▢ _${usedPrefix}kick *<@tag>*_
+  ▢ _${usedPrefix}kick2 *<@tag>*_
+  ▢ _${usedPrefix}listanum *<txt>*_
+  ▢ _${usedPrefix}kicknum *<txt>*_
+  ▢ _${usedPrefix}grupo *<abrir/cerrar>*_
+  ▢ _${usedPrefix}grouptime *<opcion> <tiempo>*_
+  ▢ _${usedPrefix}promote *<@tag>*_
+  ▢ _${usedPrefix}demote *<@tag>*_
+  ▢ _${usedPrefix}infogroup_
+  ▢ _${usedPrefix}resetlink_
+  ▢ _${usedPrefix}link_
+  ▢ _${usedPrefix}setname *<txt>*_
+  ▢ _${usedPrefix}setdesc *<txt>*_
+  ▢ _${usedPrefix}invocar *<txt>*_
+  ▢ _${usedPrefix}setwelcome *<txt>*_
+  ▢ _${usedPrefix}setbye *<txt>*_
+  ▢ _${usedPrefix}hidetag *<txt>*_
+  ▢ _${usedPrefix}hidetag *<audio>*_
+  ▢ _${usedPrefix}hidetag *<video>*_
+  ▢ _${usedPrefix}hidetag *<img>*_
+  ▢ _${usedPrefix}warn *<@tag>*_
+  ▢ _${usedPrefix}unwarn *<@tag>*_
+  ▢ _${usedPrefix}listwarn_
+  ▢ _${usedPrefix}fantasmas_
+  ▢ _${usedPrefix}destraba_
+  ▢ _${usedPrefix}setpp *<img>*_
+  ▢ _admins *<txt>*_ (sin prefijo)
+
+
+ _*< CONVERTIDORES />*_
+
+  ▢ _${usedPrefix}toanime *<img>*_
+  ▢ _${usedPrefix}togifaud *<video>*_
+  ▢ _${usedPrefix}toimg *<sticker>*_
+  ▢ _${usedPrefix}tomp3 *<video>*_
+  ▢ _${usedPrefix}tomp3 *<nota de voz>*_
+  ▢ _${usedPrefix}toptt *<video / audio>*_
+  ▢ _${usedPrefix}tovideo *<sticker>*_
+  ▢ _${usedPrefix}tourl *<video / img / audio>*_
+  ▢ _${usedPrefix}tts *<idioma> <txt>*_
+  ▢ _${usedPrefix}tts *<efecto> <txt>*_
+
+
+ _*< EFECTOS & LOGOS />*_
+
+  ▢ _${usedPrefix}logos *<efecto> <txt>*_
+  ▢ _${usedPrefix}logochristmas *<txt>*_
+  ▢ _${usedPrefix}logocorazon *<txt>*_
+  ▢ _${usedPrefix}ytcomment *<txt>*_
+  ▢ _${usedPrefix}hornycard *<@tag>*_
+  ▢ _${usedPrefix}simpcard *<@tag>*_
+  ▢ _${usedPrefix}lolice *<@tag>*_
+  ▢ _${usedPrefix}itssostupid_
+  ▢ _${usedPrefix}pixelar_
+  ▢ _${usedPrefix}blur_
+
+
+ _*< FRASES & TEXTOS />*_
+
+  ▢ _${usedPrefix}piropo_
+  ▢ _${usedPrefix}consejo_
+  ▢ _${usedPrefix}fraseromantica_
+  ▢ _${usedPrefix}historiaromantica_
+
+
+ _*< ALEATORIO />*_
+
+  ▢ _${usedPrefix}kpop *<blackpink/exo/bts>*_
+  ▢ _${usedPrefix}cristianoronaldo_
+  ▢ _${usedPrefix}messi_
+  ▢ _${usedPrefix}cat_
+  ▢ _${usedPrefix}dog_
+  ▢ _${usedPrefix}meme_
+  ▢ _${usedPrefix}itzy_
+  ▢ _${usedPrefix}blackpink_
+  ▢ _${usedPrefix}navidad_
+  ▢ _${usedPrefix}wpmontaña_
+  ▢ _${usedPrefix}pubg_
+  ▢ _${usedPrefix}wpgaming_
+  ▢ _${usedPrefix}wpaesthetic_
+  ▢ _${usedPrefix}wpaesthetic2_
+  ▢ _${usedPrefix}wprandom_
+  ▢ _${usedPrefix}wallhp_
+  ▢ _${usedPrefix}wpvehiculo_
+  ▢ _${usedPrefix}wpmoto_
+  ▢ _${usedPrefix}coffee_
+  ▢ _${usedPrefix}pentol_
+  ▢ _${usedPrefix}caricatura_
+  ▢ _${usedPrefix}ciberespacio_
+  ▢ _${usedPrefix}technology_
+  ▢ _${usedPrefix}doraemon_
+  ▢ _${usedPrefix}hacker_
+  ▢ _${usedPrefix}planeta_
+  ▢ _${usedPrefix}randomprofile_
+
+
+ _*< EFECTOS P. AUDIOS />*_
+
+*- Responde a un audio o nota de voz.*
+
+  ▢ _${usedPrefix}bass_
+  ▢ _${usedPrefix}blown_
+  ▢ _${usedPrefix}deep_
+  ▢ _${usedPrefix}earrape_
+  ▢ _${usedPrefix}fast_
+  ▢ _${usedPrefix}fat_
+  ▢ _${usedPrefix}nightcore_
+  ▢ _${usedPrefix}reverse_
+  ▢ _${usedPrefix}robot_
+  ▢ _${usedPrefix}slow_
+  ▢ _${usedPrefix}smooth_
+  ▢ _${usedPrefix}tupai_
+
+
+ _*< CHAT ANÓNIMO />*_
+
+  ▢ _${usedPrefix}start_
+  ▢ _${usedPrefix}next_
+  ▢ _${usedPrefix}leave_
+
+
+ _*< HERRAMIENTAS />*_
+ 
+  ▢ _${usedPrefix}inspect *<wagc_url>*_
+  ▢ _${usedPrefix}chatgpt *<txt>*_
+  ▢ _${usedPrefix}delchatgpt
+  ▢ _${usedPrefix}gptvoz *<txt>*_
+  ▢ _${usedPrefix}dall-e *<txt>*_
+  ▢ _${usedPrefix}spamwa *num|txt|cant>*_
+  ▢ _${usedPrefix}tamaño *<cant> <img / video>*_
+  ▢ _${usedPrefix}readviewonce *<img / video>*_
+  ▢ _${usedPrefix}clima *<país> <ciudad>*_
+  ▢ _${usedPrefix}encuesta *<txt1|txt2>*_
+  ▢ _${usedPrefix}afk *<motivo>*_
+  ▢ _${usedPrefix}ocr *<responde a img>*_
+  ▢ _${usedPrefix}hd *<responde a img>*_
+  ▢ _${usedPrefix}acortar *<url>*_
+  ▢ _${usedPrefix}calc *<operacion>*_
+  ▢ _${usedPrefix}del *<msj>*_
+  ▢ _${usedPrefix}whatmusic *<audio>*_
+  ▢ _${usedPrefix}readqr *<img>*_
+  ▢ _${usedPrefix}qrcode *<txt>*_
+  ▢ _${usedPrefix}readmore *<txt1|txt2>*_
+  ▢ _${usedPrefix}styletext *<txt>*_
+  ▢ _${usedPrefix}traducir *<txt>*_
+  ▢ _${usedPrefix}nowa *num>*_
+  ▢ _${usedPrefix}covid *<pais>*_
+  ▢ _${usedPrefix}horario_
+  ▢ _${usedPrefix}dropmail_
+  ▢ _${usedPrefix}igstalk *<usr>*_
+  ▢ _${usedPrefix}tiktokstalk *<usr>*_
+  ▢ _${usedPrefix}img *<txt>*_
+
+
+ _*< ECONOMÍA />*_
+
+  ▢ _${usedPrefix}adventure_
+  ▢ _${usedPrefix}cazar_
+  ▢ _${usedPrefix}cofre_
+  ▢ _${usedPrefix}balance_
+  ▢ _${usedPrefix}claim_
+  ▢ _${usedPrefix}heal_
+  ▢ _${usedPrefix}lb_
+  ▢ _${usedPrefix}levelup_
+  ▢ _${usedPrefix}myns_
+  ▢ _${usedPrefix}perfil_
+  ▢ _${usedPrefix}work_
+  ▢ _${usedPrefix}minar_
+  ▢ _${usedPrefix}minar2_
+  ▢ _${usedPrefix}buy_
+  ▢ _${usedPrefix}buyall_
+  ▢ _${usedPrefix}verificar_
+  ▢ _${usedPrefix}robar *<cant> <@tag>*_
+  ▢ _${usedPrefix}transfer *<tipo> <cant> <@tag>*_
+  ▢ _${usedPrefix}unreg *<sn>*_
+
+
+ _*< STICKERS />*_
+
+  ▢ _${usedPrefix}sticker *<responder a img o video>*_
+  ▢ _${usedPrefix}sticker *<url>*_
+  ▢ _${usedPrefix}sticker2 *<responder a img o video>*_
+  ▢ _${usedPrefix}sticker2 *<url>*_
+  ▢ _${usedPrefix}s *<responder a img o video>*_
+  ▢ _${usedPrefix}s *<url>*_
+  ▢ _${usedPrefix}emojimix *<emoji 1>&<emoji 2>*_
+  ▢ _${usedPrefix}scircle *<img>*_
+  ▢ _${usedPrefix}sremovebg *<img>*_
+  ▢ _${usedPrefix}semoji *<tipo> <emoji>*_
+  ▢ _${usedPrefix}qc *<txt>*_
+  ▢ _${usedPrefix}attp *<txt>*_
+  ▢ _${usedPrefix}attp2 *<txt>*_
+  ▢ _${usedPrefix}attp3 *<txt>*_
+  ▢ _${usedPrefix}ttp *<txt>*_
+  ▢ _${usedPrefix}ttp2 *<txt>*_
+  ▢ _${usedPrefix}ttp3 *<txt>*_
+  ▢ _${usedPrefix}ttp4 *<txt>*_
+  ▢ _${usedPrefix}ttp5 *<txt>*_
+  ▢ _${usedPrefix}pat *<@tag>*_
+  ▢ _${usedPrefix}slap *<@tag>*_
+  ▢ _${usedPrefix}kiss *<@tag>*_
+  ▢ _${usedPrefix}dado_
+  ▢ _${usedPrefix}wm *<packname> <autor>*_
+  ▢ _${usedPrefix}stickermarker *<efecto> <img>*_
+  ▢ _${usedPrefix}stickerfilter *<efecto> <img>*_
+
+
+ _*< PROPIETARIO Y MODS. />*_
+
+  ▢ _> *<funcion>*_
+  ▢ _=> *<funcion>*_
+  ▢ _$ *<funcion>*_
+  ▢ _${usedPrefix}dsowner_
+  ▢ _${usedPrefix}setprefix *<prefijo>*_
+  ▢ _${usedPrefix}resetprefix_
+  ▢ _${usedPrefix}autoadmin_
+  ▢ _${usedPrefix}grouplist_
+  ▢ _${usedPrefix}chetar_
+  ▢ _${usedPrefix}leavegc_
+  ▢ _${usedPrefix}cajafuerte_
+  ▢ _${usedPrefix}blocklist_
+  ▢ _${usedPrefix}addowner *<@tag / num>*_
+  ▢ _${usedPrefix}delowner *<@tag / num>*_
+  ▢ _${usedPrefix}block *<@tag / num>*_
+  ▢ _${usedPrefix}unblock *<@tag / num>*_
+  ▢ _${usedPrefix}enable *restrict*_
+  ▢ _${usedPrefix}disable *restrict*_
+  ▢ _${usedPrefix}enable *autoread*_
+  ▢ _${usedPrefix}disable *autoread*_
+  ▢ _${usedPrefix}enable *public*_
+  ▢ _${usedPrefix}disable *public*_
+  ▢ _${usedPrefix}enable *pconly*_
+  ▢ _${usedPrefix}disable *pconly*_
+  ▢ _${usedPrefix}enable *gconly*_
+  ▢ _${usedPrefix}disable *gconly*_
+  ▢ _${usedPrefix}enable *anticall*_
+  ▢ _${usedPrefix}disable *anticall*_
+  ▢ _${usedPrefix}enable *antiprivado*_
+  ▢ _${usedPrefix}disable *antiprivado*_
+  ▢ _${usedPrefix}enable *modejadibot*_
+  ▢ _${usedPrefix}disable *modejadibot*_
+  ▢ _${usedPrefix}enable *audios_bot*_
+  ▢ _${usedPrefix}disable *audios_bot*_
+  ▢ _${usedPrefix}enable *antispam*_
+  ▢ _${usedPrefix}disable *antispam*_
+  ▢ _${usedPrefix}msg *<txt>*_
+  ▢ _${usedPrefix}banchat_
+  ▢ _${usedPrefix}unbanchat_
+  ▢ _${usedPrefix}resetuser *<@tag>*_
+  ▢ _${usedPrefix}banuser *<@tag>*_
+  ▢ _${usedPrefix}unbanuser *<@tag>*_
+  ▢ _${usedPrefix}dardiamantes *<@tag> <cant>*_
+  ▢ _${usedPrefix}añadirxp *<@tag> <cant>*_
+  ▢ _${usedPrefix}banuser *<@tag>*_
+  ▢ _${usedPrefix}bc *<txt>*_
+  ▢ _${usedPrefix}bcchats *<txt>*_
+  ▢ _${usedPrefix}bcgc *<txt>*_
+  ▢ _${usedPrefix}bcgc2 *<aud>*_
+  ▢ _${usedPrefix}bcgc2 *<vid>*_
+  ▢ _${usedPrefix}bcgc2 *<img>*_
+  ▢ _${usedPrefix}bcbot *<txt>*_
+  ▢ _${usedPrefix}cleartpm_
+  ▢ _${usedPrefix}restart_
+  ▢ _${usedPrefix}update_
+  ▢ _${usedPrefix}banlist_
+  ▢ _${usedPrefix}addprem *<@tag> <tiempo>*_
+  ▢ _${usedPrefix}addprem2 *<@tag> <tiempo>*_
+  ▢ _${usedPrefix}addprem3 *<@tag> <tiempo>*_
+  ▢ _${usedPrefix}addprem4 *<@tag> <tiempo>*_
+  ▢ _${usedPrefix}delprem *<@tag>*_
+  ▢ _${usedPrefix}listcmd_
+  ▢ _${usedPrefix}setppbot *<responder a img>*_
+  ▢ _${usedPrefix}addcmd *<txt>*_
+  ▢ _${usedPrefix}delcmd_
+  ▢ _${usedPrefix}saveimage_
+  ▢ _${usedPrefix}viewimage_`.trim();
     if (m.isGroup) {
       // await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
       const fkontak2 = {'key': {'participants': '0@s.whatsapp.net', 'remoteJid': 'status@broadcast', 'fromMe': false, 'id': 'Halo'}, 'message': {'contactMessage': {'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}, 'participant': '0@s.whatsapp.net'};
