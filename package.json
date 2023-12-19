@@ -16,16 +16,16 @@
     "eslint": "eslint .",
     "eslintfix": "eslint --fix ."
   },
-  "homepage": "https://github.com/Buitreofc/Buitre",
+  "homepage": "https://www.instagram.com/iambuitre?igshid=ZGNjOWZkYTE3MQ==",
   "author": {
     "name": "BuitreOFC"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Buitreofc/Buitre"
+    "url": "https://www.instagram.com/iambuitre?igshid=ZGNjOWZkYTE3MQ==
   },
   "bugs": {
-    "url": "https://github.com/Buitreofc/Buitre"
+    "url": "https://www.instagram.com/iambuitre?igshid=ZGNjOWZkYTE3MQ=="
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
