@@ -63,7 +63,7 @@ const handler = async (m, { conn, usedPrefix }) => {
       forwardingScore: 200,
       isForwarded: true,
       externalAdReply: {
-        mediaUrl: "https://chat.whatsapp.com/CmJj0wlJqAHCynm6eAHmAc",
+        mediaUrl: "https://chat.whatsapp.com/JIz9Snzgt2X4TUDmTxlnRd",
         mediaType: 2,
         previewType: "pdf",
         title: "ᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ",
