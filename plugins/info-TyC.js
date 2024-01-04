@@ -41,7 +41,7 @@ _- Si en algún momento recibe un mensaje del numero del Bot y no es un comando 
 *⁉️ Te quedaron dudas?*
 _- Si todavía tienes alguna duda o reclamo de lo mencionado aqui o referente al Bot, contáctame a mi numero personal al cual estaré respondiendo lo antes posible para brindarte una solución y/o hacerme responsable de alguna reclamación_ 
 
-> wa.me/34604135921
+> wa.me/50664527056
 > Buitre OFC
 > Correo electronico: buitre167282@gmail.com
 
