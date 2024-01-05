@@ -24,6 +24,8 @@ _4.- La "empresa" no se hace responsable del uso de un Sub Bot o Bot no oficial,
 _5.- No nos hacemos responsables de los números que se puedan ir a soporte por el uso del Bot, es aconsejable siempre usar números virtuales para usos de Bots_
 _6.- Los audios/notas de voz/imágenes/videos o cualquier otro archivo multimedia que sean de propiedad de Buitre - Bot son únicamente y exclusivamente de este Bot, si se detecta a otro Bot con alguno o algunos de los archivos multimedia antes mencionado se tomarán cartas en el asunto._
 _7.- Están prohibidos las llamada al bot tanto en grupos como al privado 
+_8.- Es normal que un bot no se encuentre activo en algún momento pero solo es temporada ‚ porque pasa esto?:
+Ya que son bots y mandan tantos mensajes es normal que WhatsApp los suspenda por unas horas ya que los detecta como spam ‚ pero este proceso solo lleva unas horas y luego todo continua normal 
 
 *➤ Mensaje del numero del Bot?*
 _- Si en algún momento recibe un mensaje del numero del Bot y no es un comando posiblemente sea de el propietario del Bot o el propietario del numero, este es un persona real por lo que se le pide que no le falte el respeto_
