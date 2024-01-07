@@ -8,7 +8,7 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
   const oi = `*𝙼𝙴𝙽𝚂𝙰𝙹𝙴:* ${pesan}`;
   let teks = `*⺀🎆🎁𝐇𝐀𝐏𝐏𝐘 𝐍𝐄𝐖 𝐘𝐄𝐀𝐑🎁🎇⺀*\n\n❏ ${oi}\n\n❏ *𝙴𝚃𝙸𝚀𝚄𝙴𝚃𝙰𝚂:*\n`;
   for (const mem of participants) {
-    teks += `⛄ @${mem.id.split('@')[0]}\n`;
+    teks += `🍾 @${mem.id.split('@')[0]}\n`;
   }
   teks += `*└* By @iambuitre 🎅🏼\n\n*▌│█║▌║▌║║▌║▌║▌║█*`;
   conn.sendMessage(m.chat, {text: teks, mentions: participants.map((a) => a.id)} );
