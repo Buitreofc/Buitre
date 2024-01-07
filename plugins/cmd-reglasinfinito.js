@@ -8,11 +8,11 @@ conn.sendFile(m.chat, url ,m)
 
 }
 
-handler.help = ['agendasemanal']
+handler.help = ['.infinito']
 
-handler.tags = ['internet']
+handler.tags = ['infinito']
 
-handler.command = /^(agendasemanal)$/i
+handler.command = /^(infinito)$/i
 
 handler.exp = 50
 
@@ -22,6 +22,6 @@ global.pack6 = [
 
  
 
- "https://h.top4top.io/p_2887bmwxn0.jpg"
+ "https://j.top4top.io/p_29280c0nn0.jpg"
 
   ]
