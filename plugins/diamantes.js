@@ -1,11 +1,15 @@
-import axios from 'axios';
-const handler = async (m, {conn, usedPrefix, command}) => {
-  const cristiano = (await axios.get(`https://k.top4top.io/p_2930k67vy0.jpg`)).data;
-  const ronaldo = await cristiano[Math.floor(cristiano.length * Math.random())];
-  conn.sendFile(m.chat, ronaldo, 'error.jpg', `*Venta de diamantes ID aquí:  https://chat.whatsapp.com/GVweATZgOlHKmk4PmLwtZu*`, m);
-};
-// conn.sendButton(m.chat, "*Venta de diamantes ID aquí:  https://chat.whatsapp.com/GVweATZgOlHKmk4PmLwtZu*", author, ronaldo, [['⚽ SIGUIENTE ⚽', `${usedPrefix + command}`]], m)}
-handler.help = ['diamantes', 'cr7'];
-handler.tags = ['internet'];
-handler.command = /^(diamantes|diamantes)$/i;
-export default handler;
+let toM = a => '@' + a.split('@')[0]
+function handler(m, { groupMetadata }) {
+let ps = groupMetadata.participants.map(v => v.id)
+let a = ps.getRandom()
+let b
+do b = ps.getRandom()
+while (b === a)
+m.reply(`*_Venta de diamantes ID aquí:_* https://chat.whatsapp.com/GVweATZgOlHKmk4PmLwtZu`, null, {
+mentions: [a, b]
+})}
+handler.help = ['diamantes']
+handler.tags = ['main', 'fun']
+handler.command = ['diamantes','diamantes']
+handler.group = true
+export default handler
