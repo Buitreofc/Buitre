@@ -8,8 +8,8 @@ while (b === a)
 m.reply(`*_Venta de diamantes ID aquí:_* https://chat.whatsapp.com/GVweATZgOlHKmk4PmLwtZu`, null, {
 mentions: [a, b]
 })}
-handler.help = ['diamantes']
+handler.help = ['comprardiamantes']
 handler.tags = ['main', 'fun']
-handler.command = ['diamantes','diamantes']
+handler.command = ['comprardiamantes','comprardiamantes']
 handler.group = true
 export default handler
