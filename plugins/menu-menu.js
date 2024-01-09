@@ -35,8 +35,8 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  ▢ *Tokens:* ${joincount}
  ▢ *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
  ${readMore}
-
 *_Adquiere tu Buitre Bot:_*
+
       +506 6452 7056 
 
   _*< LISTA DE MENUS />*_
