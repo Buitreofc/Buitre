@@ -6,7 +6,7 @@ let b
 do b = ps.getRandom()
 while (b === a)
 m.reply(`*_Venta de diamantes por ID aquí:_*
- https://chat.whatsapp.com/GVweATZgOlHKmk4PmLwtZu`, null, {
+https://chat.whatsapp.com/GVweATZgOlHKmk4PmLwtZu`, null, {
 mentions: [a, b]
 })}
 handler.help = ['comprardiamantes']
