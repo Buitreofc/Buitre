@@ -36,9 +36,11 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
  ▢ *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
  ${readMore}
 
+*_Adquiere tu Buitre Bot:_*
+      +506 6452 7056 
+
   _*< LISTA DE MENUS />*_
   
-  ▢ _${usedPrefix}menuaudios_
   ▢ _${usedPrefix}menuanimes_
   ▢ _${usedPrefix}labiblia_ (🔞)
 
@@ -204,7 +206,7 @@ const handler = async (m, {conn, usedPrefix, usedPrefix: _p, __dirname, text, is
 
 
  _*< GRUPOS />*_
-
+  ▢ *comprardiamantes*
   ▢ _${usedPrefix}add *num>*_
   ▢ _${usedPrefix}kick *<@tag>*_
   ▢ _${usedPrefix}kick2 *<@tag>*_
